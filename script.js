@@ -16,5 +16,12 @@ button.addEventListener("click",()=>{
       <p class="mt-6 text-pretty text-white text-sm sm:text-base max-w-3xl text-center sm:text-left px-4 text-lg text-white drop-shadow-[0_0_8px_#5bc0be]" style=" margin-left:8px">${anime.synopsis}</p>
        <img src="${anime.images.jpg.image_url}" class="w-40 h-40 sm:w-48 sm:h-48 rounded-xl mt-4 object-contain">`
   })
- 
+  .catch(error => {
+  const infoDiv = document.getElementById("Info");
+  infoDiv.innerHTML = `
+    <h2 class="text-red-500 text-xl mt-4">Enter a valid name.</h2>
+    <p class="text-white text-sm">Error: ${error.message}</p>
+  `;
+  console.error("Fetch error:", error);
+  })
 })
