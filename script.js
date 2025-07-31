@@ -9,7 +9,7 @@ button.addEventListener("click",()=>{
   .then(data => {
     const anime = data.data[0];
      const infoDiv = document.getElementById("Info");
-     
+     infoDiv.style.backgroundColor="#212121"
      infoDiv.innerHTML = `
       <h1 class="text-4xl  font-bold text-white drop-shadow-[0_0_8px_#5bc0be] mt-[10px]">${anime.title}</h1>
       <h2 class="mt-4 text-2xl text-white drop-shadow-[0_0_8px_#5bc0be]">${anime.genres.map(g => g.name).join(", ")}</h2>
