@@ -11,11 +11,10 @@ button.addEventListener("click",()=>{
      const infoDiv = document.getElementById("Info");
      infoDiv.style.backgroundColor="#212121"
      infoDiv.innerHTML = `
-      <h1 class="text-4xl  font-bold text-white drop-shadow-[0_0_8px_#5bc0be] mt-[10px]">${anime.title}</h1>
-      <h2 class="mt-4 text-2xl text-white drop-shadow-[0_0_8px_#5bc0be]">${anime.genres.map(g => g.name).join(", ")}</h2>
-      <p class="mt-[120px] text-lg text-white drop-shadow-[0_0_8px_#5bc0be]" style=" margin-left:8px">${anime.synopsis}</p>
-       <img src="${anime.images.jpg.image_url}" style="height: 180px; width: 180px; background-color: aqua; border-radius: 15px; position: absolute;
-       left: 1vw; top:1vw ">`
+      <h1 class="text-4xl text-pretty  font-bold text-white drop-shadow-[0_0_8px_#5bc0be] mt-[10px]">${anime.title}</h1>
+      <h2 class="mt-4 text-pretty text-2xl text-white drop-shadow-[0_0_8px_#5bc0be]">${anime.genres.map(g => g.name).join(", ")}</h2>
+      <p class="mt-6 text-pretty text-white text-sm sm:text-base max-w-3xl text-center sm:text-left px-4 text-lg text-white drop-shadow-[0_0_8px_#5bc0be]" style=" margin-left:8px">${anime.synopsis}</p>
+       <img src="${anime.images.jpg.image_url}" class="w-40 h-40 sm:w-48 sm:h-48 rounded-xl mt-4 object-contain">`
   })
  
 })
